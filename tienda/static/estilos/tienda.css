@@ -1,0 +1,28 @@
+body {
+    background-color: #ecdbdd;
+}
+h1{
+	color: #000;
+}
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    background: pink;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+.bg-light {
+    background-color: #ef9da5!important;
+}

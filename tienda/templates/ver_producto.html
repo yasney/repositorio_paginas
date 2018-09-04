@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block titulo %}
+	{{ p.nombre}}
+{% endblock %}
+
+{% block content %}
+
+	<p> </p>
+		Descripcion: {{ P.descripcion }}
+	</p>
+	<p>
+		Precio: $ {{ p.precio }}
+	</p>
+	<p>
+		Stock: {{ p.stock }} unidades
+	</p>
+	<p>
+		Marca: {{ p.marca }}
+	</p>
+	
+{% endblock %}	

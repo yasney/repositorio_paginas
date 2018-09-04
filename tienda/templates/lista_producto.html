@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block titulo%}
+	<title>Lista Producto</title>
+{% endblock %}
+	
+{% block content %}
+	<h1>lista de productos: </h1>
+<div class="table-responsive">
+	
+
+
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Stock</th>
+      <th scope="col">marca</th>
+      <th scope="col">foto</th>
+      <th scope="col">acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+	{% for p in lista %}
+    <tr>
+      <td>Nombre:{{ p.nombre }}</td>
+      <td>Precio:{{ p.precio }}</td>
+      <td>Stock:{{ p.stock }}</td>
+      <td>Marca:{{ p.marca }}</td>
+	  <td> <img src="/media/{{p.foto}}"></td>
+<td>
+    	<div class="col-6">
+			<a class="btn btn-outline-secondary" href="/ver_producto/{{p.id}}"> ver detalles </a>
+    	</div>
+    	<div class="col-7">
+		<a class="btn btn-outline-secondary" href="/editar_producto/{{p.id}}"> editar </a>
+		</div>
+		<div class="col-8">
+		<a class="btn btn-outline-secondary" href="/eliminar_producto/{{p.id}}"> eliminar </a>			
+		</div>
+		</td>
+    </tr>
+   
+	</tbody>	
+</table>
+</div>
+ 
+	
+	{% endfor %}
+{% endblock %}			

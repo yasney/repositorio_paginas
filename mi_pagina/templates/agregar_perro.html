@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+	{% block titulo%}
+	<title>Agregar Perro</title>
+	{% endblock %}
+	
+	{% block content %}
+	<h3 style="color: #1D23FF;">Agregar perro:</h3>
+	<form  action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ formulario.as_p}}
+	<button type="submit" class="btn btn-outline-dark">ENVIAR</button>
+	</form>		
+{% endblock %}

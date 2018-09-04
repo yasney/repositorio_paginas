@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block titulo%}
+	<title>Lista Perros</title>
+{% endblock %}
+	
+{% block content %}
+	<h1>lista de perros</h1>
+	
+	{% for p in lista %}
+
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Raza</th>
+      <th scope="col">foto</th>
+      <th scope="col">acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nombre:{{ p.nombre }}</td>
+      <td>Raza: {{p.raza}}</td>
+	  <td><img src="/media/{{p.foto}}"></td>
+
+    	<td>
+    	<div class="col-6">
+			<a class="btn btn-outline-secondary" href="/ver_perros/{{p.id}}"> ver detalles </a>
+    	</div>
+    		<div class="col-7">
+		<a class="btn btn-outline-secondary" href="/editar_perros/{{p.id}}"> editar </a>
+			</div>
+		<div class="col-8">
+			<a class="btn btn-outline-secondary" href="/eliminar_perros//{{p.id}}"> eliminar </a>	
+			</div>
+		</td>
+    </tr>
+	</tbody>
+</table>	
+	
+	{% endfor %}
+{% endblock %}			

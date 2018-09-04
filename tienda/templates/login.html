@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block titulo %}
+<title>login</title>
+	
+{% endblock %}
+
+{% block content %}
+<h1>Iniciar sesion</h1>
+	<h2>{{ msj }}</h2>
+	<form action="" method="POST">
+		{% csrf_token %}
+		{{ formulario.as_p }}
+		<button type="submin" class="btn btn-dark">enviar</button>
+	</form>	
+
+	<a href="/register">Registrarse</a>
+{% endblock %}	

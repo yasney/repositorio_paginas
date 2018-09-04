@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+	{% block title %}
+	<title>materiales</title>
+	
+	{% endblock %}
+
+	{% block content %}
+
+	<h1>Bienvenido</h1>
+	{%if info_enviado%}
+	<h2>La informacion dada es:</h2>
+	{{email}}
+	<p>con titulo:</p>
+	{{title}}
+	<p>con un texto</p>
+	{{texto}}
+	<p>con una fecha</p>
+	{{time}}
+	{%else%}
+<form action="" method="POST">
+	{%csrf_token%}
+	{{formulario.as_p}}
+
+	<button type="submit" class="btn btn-dark">ENVIAR</button>
+	
+</form>
+{% endif %}
+{% endblock %}
